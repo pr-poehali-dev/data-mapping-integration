@@ -1,5 +1,10 @@
 import type { ReactNode } from "react"
 
+export interface GalleryItem {
+  src: string
+  label: string
+}
+
 export interface Section {
   id: string
   title: string
@@ -7,6 +12,7 @@ export interface Section {
   content?: string
   showButton?: boolean
   buttonText?: string
+  gallery?: GalleryItem[]
 }
 
 export interface SectionProps extends Section {

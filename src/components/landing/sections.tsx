@@ -24,6 +24,29 @@ export const sections = [
     content: 'Создавай треки и саундтреки в любом жанре. Джаз, электроника, оркестр — нейросеть напишет музыку под твой проект.'
   },
   {
+    id: 'gallery',
+    title: 'Примеры работ.',
+    content: 'Всё это создано нейросетью — за секунды, по текстовому запросу.',
+    gallery: [
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/ff2ddb02-1c1d-4106-beaf-eba7c3daf1ff.jpg',
+        label: 'Фото'
+      },
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/b5980f21-2d6a-44d9-96d4-6d685f2ed868.jpg',
+        label: 'Видео'
+      },
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/c683617f-ee07-409e-996f-4be3d277a50f.jpg',
+        label: 'Музыка'
+      },
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/cd050e22-3563-420c-8900-689390ed62e9.jpg',
+        label: 'Креативы'
+      },
+    ]
+  },
+  {
     id: 'cta',
     title: 'Твой контент — твои правила.',
     content: 'Все форматы в одном месте. Создавай фото, видео, музыку и креативы быстрее и дешевле, чем когда-либо.',
