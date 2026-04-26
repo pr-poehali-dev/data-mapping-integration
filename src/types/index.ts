@@ -3,6 +3,13 @@ import type { ReactNode } from "react"
 export interface GalleryItem {
   src: string
   label: string
+  duration?: string
+}
+
+export interface VideoGalleryItem {
+  src: string
+  label: string
+  duration?: string
 }
 
 export interface Section {
@@ -13,6 +20,7 @@ export interface Section {
   showButton?: boolean
   buttonText?: string
   gallery?: GalleryItem[]
+  videoGallery?: VideoGalleryItem[]
 }
 
 export interface SectionProps extends Section {

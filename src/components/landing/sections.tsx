@@ -47,6 +47,33 @@ export const sections = [
     ]
   },
   {
+    id: 'video-gallery',
+    title: 'Видео из текста.',
+    content: 'Введи описание — получи готовый ролик. Реклама, клипы, кино — нейросеть снимает за тебя.',
+    videoGallery: [
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/b87197a4-47ee-4beb-9b22-cbfbd8251602.jpg',
+        label: 'Футуристичный город',
+        duration: '0:15'
+      },
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/346d7fa8-bb8b-4d91-aa0c-269f239e03bb.jpg',
+        label: 'Fashion реклама',
+        duration: '0:30'
+      },
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/5565c681-698f-4165-821d-067a846c3b2a.jpg',
+        label: 'Волшебный лес',
+        duration: '0:45'
+      },
+      {
+        src: 'https://cdn.poehali.dev/projects/bca5d402-5124-422b-9ea1-f7474baf2acc/files/15bb45b8-377b-4053-8c63-5fd4cf8ac1d5.jpg',
+        label: 'Tech продукт',
+        duration: '0:20'
+      },
+    ]
+  },
+  {
     id: 'cta',
     title: 'Твой контент — твои правила.',
     content: 'Все форматы в одном месте. Создавай фото, видео, музыку и креативы быстрее и дешевле, чем когда-либо.',

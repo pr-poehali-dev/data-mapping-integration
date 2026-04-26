@@ -1,8 +1,9 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Icon from "@/components/ui/icon"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, gallery }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, gallery, videoGallery }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       {subtitle && (
@@ -60,6 +61,42 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-violet-500/80 text-white backdrop-blur-sm">
                   {item.label}
                 </span>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
+      {videoGallery && (
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-10 max-w-5xl"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isActive ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          {videoGallery.map((item, i) => (
+            <motion.div
+              key={i}
+              className="relative group overflow-hidden rounded-xl aspect-video cursor-pointer"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isActive ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+            >
+              <img
+                src={item.src}
+                alt={item.label}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-violet-500/70 transition-all duration-300">
+                  <Icon name="Play" size={20} className="text-white ml-1" />
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 flex items-end justify-between">
+                <span className="text-white text-xs font-medium">{item.label}</span>
+                {item.duration && (
+                  <span className="text-white/70 text-xs bg-black/50 px-1.5 py-0.5 rounded">{item.duration}</span>
+                )}
               </div>
             </motion.div>
           ))}
