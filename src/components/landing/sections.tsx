@@ -4,7 +4,7 @@ export const sections = [
   {
     id: 'hero',
     subtitle: <Badge variant="outline" className="text-violet-400 border-violet-400">Нейросети для творчества</Badge>,
-    title: "Создавай. Без ограничений.",
+    title: "Создаём. Без ограничений.",
     showButton: true,
     buttonText: 'Попробовать бесплатно'
   },
